@@ -1,7 +1,7 @@
 import React from 'react'
-
+import "./App.scss"
 export default function App() {
   return (
-    <div><h1>Armenia</h1></div>
+    <div>App</div>
   )
 }
