@@ -1,5 +1,40 @@
-h2 {
-  text-align: center;
-  padding: 1em;
-  background-color: teal;
+
+.App{
+  margin: 50px auto;
+  background-color:#eee;
+  padding: 30px;
 }
+
+  .App__container{ 
+    display: flex;
+    gap: 20px;
+  }
+  
+    article{
+      flex-basis: 32%;
+      border-radius: 4px;
+      background-color: #fff;
+      overflow: hidden;
+    }
+      
+      img{
+        width: 100%;
+        object-fit: cover;
+        height: 300px;
+        display:inline-block;
+      
+      }
+
+      div{
+       padding: 0em 2em;
+      }
+       h2{
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 1.8;
+       }
+   
+  .App__price{
+    font-size: 26px;
+  }
+
