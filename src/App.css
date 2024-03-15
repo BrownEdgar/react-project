@@ -1,7 +1,7 @@
 
 .App{
   margin: 50px auto;
-  background-color:#eee;
+  background-color:black;
   padding: 30px;
 }
 
@@ -28,13 +28,17 @@
       div{
        padding: 0em 2em;
       }
+      h1{
+      color: #fff;
+      border-bottom:  solid #e8ef0a;
+      }
+     
+        
+      
        h2{
         font-size: 30px;
         font-weight: 400;
         line-height: 1.8;
        }
    
-  .App__price{
-    font-size: 26px;
-  }
 
