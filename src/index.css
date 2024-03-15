@@ -1,19 +1,9 @@
 * {
   padding: 0;
   box-sizing: border-box;
-  background-color: gray;
   text-align: center;
 }
 
 :root {
   font-family: Inter, system-ui, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-}
-h1{
-  color: orange;
-  font-size: 60px;
-  background: rgb(255,29,0);
-  background: linear-gradient(32deg, rgba(255,29,0,1) 29%, rgba(37,21,184,1) 49%, rgba(255,154,0,1) 83%);
-
 }
