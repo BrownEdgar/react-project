@@ -1,0 +1,23 @@
+.DevCategories{
+    background-color: rgb(70, 69, 86);
+    color: aliceblue;
+    padding: 0 1em;
+    width: 60%;
+    margin: 0 auto;
+}
+.DevCategories > h1{
+    text-decoration: underline greenyellow;
+
+}
+.lang{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 10px;
+    font-size: 20px;
+    gap: 15px;
+}
+.lang > img{
+    width: 400px;
+    height: 400px;
+    border-radius: 12px;
+}
