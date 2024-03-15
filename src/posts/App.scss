@@ -1,0 +1,45 @@
+body{
+  background-color:darkgray;
+}
+
+.posts{
+  display: flex;
+  gap: 24px;
+  width: 96%;
+  margin: 50px auto;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  & > div{
+    flex-basis: 32%;
+    min-width: 260px;
+    flex-grow: 1;
+    padding: 1em;
+    background-color: #dedede;
+    border-radius: 12px;
+    position: relative;
+    background-color: rgb(19, 185, 13);
+  }
+  button{
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    padding: 6px;
+    color: white;
+    background-color: red;
+    border: 0;
+    cursor: pointer;
+    &:hover{
+      background-color: black;
+      scale: 1.02;
+    }
+
+  }
+
+}
+
+.App__button{
+  font-size: 20px;
+  border-radius: 8px;
+  background-color: rgb(10, 172, 118);
+  cursor: pointer;
+}
