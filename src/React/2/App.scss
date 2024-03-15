@@ -1,0 +1,61 @@
+.Container{
+    background-color: rgb(245, 247, 246);
+}
+.Posts{
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    .Posts__id{
+        background-color: rgb(148, 148, 148);
+        padding: 0 15px;
+        border-radius: 10px;
+        box-shadow: 0 60px 80px rgba(0,0,0,0.60), 0 45px 26px rgba(0,0,0,0.14);        
+        position: relative;
+        cursor: pointer;
+        & > p {
+            font-size: 30px;
+            font-weight: 700;
+            margin: 10px;
+        }
+        & > h2{
+            text-transform: uppercase;
+            color: rgb(255, 136, 0);
+        }
+        & > button{
+            position: absolute;
+            top: 6px;
+            right: 6px;
+            background-color: black;
+            color:red;
+            border: 0;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+        & > button:hover{
+            scale: 0.8;
+        }
+        & > div{
+            width: 20px;
+            height: 20px; 
+            position: absolute;
+            border-radius: 50%;
+            top: 6px;
+            left: 6px;
+        }
+        & > .green{
+            background-color: green;
+        }
+        & > .red{
+            background-color: red;
+        }
+    }
+    
+    .Posts__id:hover{
+        scale: 1.05;
+        background-color:rgb(77, 73, 73) ;
+        transition: 0.5s;
+    }
+}
