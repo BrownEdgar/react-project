@@ -13,27 +13,32 @@ export default function FData() {
     getData()
   }, [])
 
-  const deleteItem = (e) =>{
-    e.target.parentNode.remove()
+  const deleteItem = (e, id) => {
+    e.stopPropagation()
+    const result = post.filter(elem => elem.id !== id);
+    console.log(result)
+    setPost(result)
   }
-  const completToggle = (e) =>{
-    if(e.target.tagName === 'DIV'){
-        e.target.children[1].className =='red'?
-        e.target.children[1].classList.replace('red','green'):
-        e.target.children[1].classList.replace('green','red')
-    } 
+  const completToggle = (id) => {
+    const result = post.map(elem => {
+      if (elem.id === id) {
+        elem.completed = !elem.completed;
+      }
+      return elem;
+    });
+    setPost(result)
   }
   return (
     <div className='FData'>
-        {
-            post.map(elem=>{
-                return <div key ={elem.id} onClick = {completToggle}>
-                        <p className='info'>{elem.id} | {elem.title}</p>
-                        <p className={elem.completed?'green':'red'}></p>
-                        <button className='remove' onClick = {deleteItem}>X</button>
-                </div>
-            })
-        }
+      {
+        post.map(elem => {
+          return <div key={elem.id} onClick={() => completToggle(elem.id)}>
+            <p className='info'>{elem.id} | {elem.title}</p>
+            <span className={elem.completed ? 'green' : 'red'}></span>
+            <button className='remove' onClick={(e) => deleteItem(e, elem.id)}>X</button>
+          </div>
+        })
+      }
     </div>
   )
 }
