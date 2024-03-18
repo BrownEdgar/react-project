@@ -1,0 +1,73 @@
+.Users {
+    text-align: center;
+    background-color: orange;
+    &>h1 {
+        font-size: 40px;
+    }
+    &__info {
+        display: inline-block;
+        &>h1 {
+            
+            padding: 5px 10px;
+            border-radius: 20px;
+            background: rgb(255,29,0);
+            background: linear-gradient(32deg, rgba(255,29,0,1) 29%, rgba(37,21,184,1) 49%, orange 83%);
+            color: yellow;
+            font-size: 40px;
+            margin: 5px;
+            cursor: pointer; 
+            box-shadow: 0px -25px 20px -20px rgba(0, 0, 0, 0.45), -25px 0 20px -20px rgba(0, 0, 0, 0.45);
+        }
+        &>h1:hover{
+            scale: 1.05;
+        }
+        &>h2 {
+            margin-left: 7em;
+            display: inline-block;
+            color: yellow;
+            background: rgb(255,29,0);
+            background: linear-gradient(32deg, rgba(255,29,0,1) 29%, rgba(37,21,184,1) 49%, orange 83%);
+            border-radius: 20px;
+            padding: 10px 50px;
+            cursor: pointer; 
+            box-shadow: 0px -25px 20px -20px rgba(0, 0, 0, 0.45), -25px 0 20px -20px rgba(0, 0, 0, 0.45); 
+        }
+        &>h2:hover{
+            scale: 1.05;
+        }
+        &>button{
+            margin-left: 20px;
+            font-size: 20px;
+            border-radius: 15px;
+            border: none;
+            padding: 5px 20px;
+            cursor: pointer;
+            background-color: black;
+            color: orange;
+        }
+        &>button:active{
+          scale: 1.05;  
+        }
+        &>button:hover{
+            background-color: red;
+        }
+    }
+    &__buttons {
+        display: flex;
+        justify-content: center;
+        gap: 10%;
+        padding: 10px;
+        &>button {
+            border: none;
+            background-color: orange;
+            font-size: 40px;
+            cursor: pointer;
+        }
+        &>button:active{
+            scale: 1.1;
+        }
+        &>button:hover{
+            color: red;
+        }
+    }
+}
