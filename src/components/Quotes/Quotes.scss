@@ -2,23 +2,28 @@
   width: 1200px;
   height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-direction: column;
   gap: 50px;
+  padding: 150px;
   margin: 0 auto;
   &__item {
     background-color: tan;
+    position: relative;
     padding: 2em;
     border-radius: 20px;
     color: #711a1a;
+    width: 92%;
+    min-height: 220px;
+    overflow: hidden;
   }
   &__buttons {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: end;
+    gap: 24px;
     width: 100%;
-
     padding: 10px 50px;
     button {
       padding: 0.6rem 1rem;
@@ -28,7 +33,46 @@
       font-weight: 700;
       background-color: #000;
       color: #fff;
-      font-size: 40px;
+      font-size: 30px;
+      flex-grow: 1;
+      transition: transform 0.5s;
+      &:nth-child(1) {
+        transform-origin: left;
+      }
+      &:nth-child(2) {
+        transform-origin: right;
+      }
+      &:active {
+        transform: scaleX(0.9);
+      }
+    }
+  }
+
+  &__sm {
+    font-size: 26px;
+  }
+  &__author {
+    background-color: orangered;
+    padding: 4px 12px;
+    margin-top: 12px;
+    border-radius: 6px;
+    width: 200px;
+    margin-left: auto;
+    text-align: center;
+  }
+  &__icon {
+    font-size: 36px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.2s;
+
+    &-like {
+      color: #fff;
+      i {
+        &[class$="-fill"] {
+          color: red;
+        }
+      }
     }
   }
 }
