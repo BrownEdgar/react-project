@@ -38,7 +38,7 @@ export default function OurProducts() {
                 {
                     phones.map(phone => {
                         return loading
-                            ? <img className='telephones__loader' src={Loader} alt="" />
+                            ? <img className='telephones__loader' src={Loader} alt="Loader" />
                             : (<div key={phone.text} className='telephones__phone'>
                                 <img src={phone.img} alt="" />
                                 <p>{phone.text}</p>

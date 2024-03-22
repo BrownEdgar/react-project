@@ -1,0 +1,39 @@
+.SelectPage {
+    ul {
+        scroll-snap-type: mandatory;
+        margin: 0 auto;
+        display: grid;
+        grid-auto-flow: column;
+        width: 60%;
+        overflow-x: auto;
+        grid-auto-columns: 40px;
+        padding: 0.5em;
+        scrollbar-color: black grey;
+        transform: 2s;
+        li {
+            text-align: center;
+            &:hover{
+                scale: 1.2;
+                background-color: black;
+                color: #eee;
+                border-radius: 12px;
+                opacity: 0.5;
+
+            }
+            &.active{
+                background-color: #eee;
+                border-radius: 12px;
+                opacity: 0.5;
+            }
+            &.active:hover{
+                color: black;
+            }
+            a {
+                width: 100%;
+                height: 100%;
+                text-decoration: underline;
+
+            }
+        }
+    }
+}

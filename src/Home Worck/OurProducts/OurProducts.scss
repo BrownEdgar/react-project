@@ -1,6 +1,7 @@
 .OurProducts {
     background-color: #eee;
-    height: 550px;
+    padding: 2em;
+
     &__title {
         font-family: cursive;
         font-size: 40px;
@@ -19,23 +20,26 @@
     gap: 20px;
     padding: 1em 2em;
 
-    &__loader{
+    &__loader {
         height: auto;
-        width: 500px;
+        flex-grow: 1;
         border-radius: 12px;
     }
-    
+
     &__phone {
         padding: 1em;
         border-radius: 12px;
         position: relative;
-        width: 300px;
+        flex: 0 0 23%;
         background-color: white;
         overflow: hidden;
 
         &>img {
             height: 80%;
             width: 100%;
+            object-fit: contain;
+            margin: 0 auto;
+            display: block;
         }
 
         &>p {
