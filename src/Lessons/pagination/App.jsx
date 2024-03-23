@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.scss'
 import Pagination from '../../components/Pagination/Pagination';
+import ReactPaginate from 'react-paginate';
 import CircleLoader from '../../components/Loaders/CircleLoader/CircleLoader'
 
 
@@ -20,7 +21,11 @@ export default function App() {
   }, [perPage, page])
 
 
-  const setPages = (n) => setPage(n);
+  const handlePageClick = ({ selected }) => {
+    console.log(selected)
+    setPage(selected + 1)
+  }
+
   return (
     <div className="App">
       <div className='quotes'>
@@ -37,7 +42,22 @@ export default function App() {
           })
         }
       </div>
-      <Pagination total={100} perpage={perPage} setPages={setPages} page={page} />
+      {/* <Pagination total={100} perpage={perPage} setPages={setPages} page={page} /> */}
+      <div className='Pagination'>
+        <ReactPaginate
+
+          breakLabel="..."
+          nextLabel={<button ><i class="bi bi-arrow-bar-right"></i></button>}
+          onPageChange={handlePageClick}
+          pageRangeDisplayed={4}
+          pageCount={Math.ceil(100 / perPage)}
+          previousLabel={<i class="bi bi-arrow-bar-left"></i>}
+          className='navigation'
+          renderOnZeroPageCount={null}
+          initialPage={10}
+
+        />
+      </div>
     </div>
 
   )
