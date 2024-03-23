@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 
 import ReactPaginate from 'react-paginate'
+import './App.scss'
 
 function App() {
 
@@ -41,15 +42,13 @@ function App() {
   return (
     <div className='container'>
 
-      <div className='row m-2'>
-
-
+      <div className='row'>
         {items.map((item) => {
-          return <div key={item.id} className="col-sm-6 col-md-4 v my-2">
-            <div className="card shadow-sm w-100" style={{ minHeight: 225 }}>
+          return <div key={item.id} className="row__item">
+            <div className="card">
               <div className="card-body">
-                <h5 className="card-title text-center h2">id:{item.id}</h5>
-                <h6 className="card-subtitle mb-2 text-muted text-center">{item.email}</h6>
+                <h5 className="card-title ">id:{item.id}</h5>
+                <h6 className="card-subtitle">{item.email}</h6>
                 <p className="card-text">{item.body}</p>
               </div>
             </div>
