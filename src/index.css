@@ -9,3 +9,13 @@
   line-height: 1.5;
   font-weight: 400;
 }
+
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.App {
+  padding-left: 16px;
+  padding-right: 16px;
+}
