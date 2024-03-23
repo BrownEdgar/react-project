@@ -1,8 +1,9 @@
 .Loader {
   position: absolute;
   inset: 0 0 0 0;
-  background-color: rgba($color: #3f0e0e, $alpha: 0.8);
+  background-color: rgba($color: #0d9488, $alpha: 0.9);
   display: grid;
   place-items: center;
   height: 100%;
+  z-index: 99999;
 }

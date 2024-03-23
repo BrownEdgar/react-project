@@ -1,0 +1,35 @@
+.Pagination {
+  margin: 20px auto;
+  padding: 1em;
+  height: 60px;
+  ul {
+    display: grid;
+    padding: 0 4px;
+    grid-auto-flow: column;
+    width: 1150px;
+    overflow-y: hidden;
+    overflow-x: auto;
+    grid-auto-columns: 50px;
+    li {
+      border: 1px solid blue;
+      text-align: center;
+      transition: 0.3s;
+      &.active {
+        background-color: brown;
+        color: #fff;
+        scale: 1.05;
+      }
+      &:hover {
+        background-color: lightblue;
+      }
+      a {
+        width: 100%;
+        padding: 10px;
+
+        font-size: 20px;
+        display: block;
+        height: 100%;
+      }
+    }
+  }
+}

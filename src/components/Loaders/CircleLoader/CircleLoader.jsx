@@ -1,5 +1,5 @@
 import React from 'react';
-import Loader from '../../assets/loader.svg'
+import Loader from '../../../assets/loader.svg'
 import './CircleLoader.scss'
 
 export default function CircleLoader() {

@@ -1,0 +1,50 @@
+.App {
+  max-width: 1200px;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  margin: 10px auto;
+  height: 100vh;
+  .quotes {
+    width: 100%;
+    display: flex;
+    margin: 0px auto;
+    padding: 1em 2em;
+    flex-grow: 1;
+    position: relative;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 20px;
+    gap: 10px;
+    z-index: 1;
+    &-block {
+      padding: 1em;
+      background-image: linear-gradient(to top right, #0d9488, #042f2e);
+      color: #fff;
+      border-radius: 12px;
+      height: 130px;
+      position: relative;
+      span {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 700;
+        background-color: #e6fa0b;
+        color: #e70909;
+        right: -20px;
+        top: -5px;
+        font-size: 22px;
+        border: 4px solid #000;
+      }
+      h2 {
+        line-height: 1.5;
+      }
+    }
+  }
+}
