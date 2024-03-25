@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import './PaginateBlog.scss'
 import ReactPaginate from 'react-paginate';
+import Spinner from './Spinner.svg'
+
 export default function PaginateBlog() {
     const [blog, setBlog] = useState(
         [
@@ -74,6 +76,8 @@ export default function PaginateBlog() {
     const [perPage, setPerPage] = useState(3)
     const [loading, setLoading] = useState(true)
 
+    setTimeout(setLoading,1000, false)
+
     const x = page * perPage
     const currentSlice = blog.slice(x - perPage, x)
 
@@ -85,9 +89,10 @@ export default function PaginateBlog() {
             <h1 className='title'>Blog</h1>
             <div className='PaginateBlog'>
 
-                {
+                {  
                     currentSlice.map(elem => {
-                        return (
+                        return   loading ? <div className='PaginateBlog__box'><img  src={Spinner} /></div>
+                        : (
                             <div key={elem.id} className='PaginateBlog__box'>
                                 <img src={elem.poster} />
                                 <h3>{elem.title}</h3>
