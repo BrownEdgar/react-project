@@ -8,6 +8,9 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+
+
+
 }
 
 ul {
@@ -17,4 +20,15 @@ ul {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+pre {
+  background-color: #1d1d1d;
+  padding: 2em;
+  width: 50%;
+  margin: 20px auto;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 20px;
+  white-space: pre-line;
 }

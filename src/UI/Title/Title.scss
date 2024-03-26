@@ -1,0 +1,22 @@
+.Title {
+  padding: 1em;
+  letter-spacing: 2px;
+  margin: 20px;
+  border-radius: 16px;
+  &-dark {
+    background-color: #111;
+    color: bisque;
+  }
+  &-light {
+    background-color: bisque;
+    color: #111;
+  }
+  &-pink {
+    background-image: linear-gradient(to right, rgb(242, 112, 156), rgb(255, 148, 114));
+    color: #111;
+  }
+
+  &-center {
+    text-align: center !important;
+  }
+}
