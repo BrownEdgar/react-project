@@ -1,44 +1,7 @@
-
-.App{
-  margin: 50px auto;
-  background-color:black;
-  padding: 30px;
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
 }
-
-  .App__container{ 
-    display: flex;
-    gap: 20px;
-  }
-  
-    article{
-      flex-basis: 32%;
-      border-radius: 4px;
-      background-color: #fff;
-      overflow: hidden;
-    }
-      
-      img{
-        width: 100%;
-        object-fit: cover;
-        height: 300px;
-        display:inline-block;
-      
-      }
-
-      div{
-       padding: 0em 2em;
-      }
-      h1{
-      color: #fff;
-      border-bottom:  solid #e8ef0a;
-      }
-     
-        
-      
-       h2{
-        font-size: 30px;
-        font-weight: 400;
-        line-height: 1.8;
-       }
-   
 
