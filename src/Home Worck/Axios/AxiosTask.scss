@@ -1,0 +1,61 @@
+.AxiosTask {
+    background-color: rgba(90, 91, 91, 0.201);
+
+    &__title {
+        text-align: center;
+        color: #1d1d1d;
+        font-size: 45px;
+        text-shadow: 3px 3px 20px #161616,
+            -2px 1px 30px #242223;
+    }
+
+    &__box {
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        &>hr {
+            border: 2px solid #1d1d1d;
+            height: 500px;
+        }
+
+        &>pre {
+            overflow: hidden;
+            background-color: #1d1d1d;
+            color: aliceblue;
+            font-size: 16px;
+            max-width: 1000px;
+            border-radius: 10px;
+            padding: 1em 3em;
+        }
+
+        &>.buttons {
+            &>button {
+                background-color: #1d1d1d;
+                color: aliceblue;
+                transition: 300ms;
+
+                &:hover {
+                    background-color: silver;
+                    color: #1d1d1d;
+                }
+
+                &:active {
+                    scale: 0.8;
+                    transition: 300ms;
+                }
+
+                &:disabled {
+                    color: #1d1d1d;
+                    background-color: silver;
+                    scale: 0.9;
+                }
+            }
+
+            display: grid;
+            gap: 18px;
+
+        }
+    }
+}
