@@ -1,0 +1,32 @@
+.App {
+  display: flex;
+  padding: 2em;
+  gap: 20px;
+  form {
+    width: 400px;
+    flex-shrink: 0;
+    padding: 10px;
+    background-color: rgb(194, 45, 11);
+    input,
+    textarea {
+      margin-top: 10px;
+      width: 100%;
+      padding: 0.6rem 1em;
+      font-size: 20px;
+    }
+  }
+  &__posts {
+    margin: 0 auto;
+    padding: 2em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 160px;
+    gap: 30px;
+    & > div {
+      border-radius: 12px;
+      overflow: hidden;
+      background-color: #eee;
+      padding: 1em;
+    }
+  }
+}

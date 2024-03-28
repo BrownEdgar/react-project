@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Title from '../../UI/Title/Title';
 
 import instance from './instance';
-console.log(import.meta.env.VITE_PORT)
+
 console.log(import.meta.env.VITE_DB_URL)
 
 
