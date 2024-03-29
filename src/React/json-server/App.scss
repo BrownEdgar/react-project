@@ -1,0 +1,30 @@
+body{
+    background-color: rgb(117, 112, 112);
+}
+.App{
+    display: flex;
+    & > form > input {
+        display: block;
+        margin-bottom: 10px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color:black ;
+        color: white;
+        font-size: 15px;
+
+    }
+    &__users{
+        margin: 0 auto;
+        padding: 2em;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        & > div{
+            background-color: blueviolet;
+            border-radius: 15px;
+            overflow: hidden;
+            padding: 1em;
+    }
+}
+}
