@@ -3,13 +3,14 @@ import './App.scss'
 import { useState } from 'react'
 import axios from 'axios'
 import Title from '../../UI/Title/Title'
-import Button from '../../UI/Title/Button/Button'
+import Button from "../../UI/Title/Button/Button.jsx"
+
 
 export default function App() {
   const [state, setState] = useState({
     data: [],
     target: 'todos',
-    _limit: 5
+    limit: 5
   })
   const [post, setPost] = useState([])
   useEffect(() => {
