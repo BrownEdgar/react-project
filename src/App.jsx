@@ -6,6 +6,8 @@ import Users from './Home Worck/Users/Users'
 import Pagination from './Home Worck/Pagination/Pagination'
 import PaginateBlog from './Home Worck/PaginateBlog/PaginateBlog'
 import AxiosTask from './Home Worck/Axios/AxiosTask'
+import Server from './Home Worck/json-server/Server'
+
 
 
 export default function App() {
@@ -17,7 +19,8 @@ export default function App() {
       {/* <OurProducts/> */}
       {/* <Pagination/> */}
       {/* <PaginateBlog/> */}
-      <AxiosTask/>
+      {/* <AxiosTask/> */}
+      <Server/>
     </>
   )
 }

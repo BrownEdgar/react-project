@@ -109,7 +109,6 @@ export default function PaginateBlog() {
 
             </div>
             <ReactPaginate
-                className='Paginate'
                 nextLabel="next"
                 onPageChange={handlePageClick}
                 pageCount={Math.ceil(8 / perPage)}

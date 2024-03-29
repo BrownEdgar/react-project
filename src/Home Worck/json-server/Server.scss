@@ -1,0 +1,88 @@
+.Server {
+    height: 700px;
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 1em;
+
+    &>.sign {
+        border-radius: 12px;
+        width: 400px;
+        flex-shrink: 0;
+        padding: 10px;
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
+            rgba(17, 17, 26, 0.1) 0px 16px 56px,
+            rgba(17, 17, 26, 0.1) 0px 24px 80px;
+
+        &>.btn {
+            border-radius: 10px;
+            background-color: rgb(10, 73, 132);
+        }
+
+        input,
+        textarea {
+            background-color: #eee;
+            margin-top: 10px;
+            width: 100%;
+            padding: 0.6rem 1em;
+            font-size: 20px;
+        }
+    }
+
+    &__posts {
+        width: 730px;
+        height: 450px;
+        margin: 0 auto;
+        padding: 2em;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 160px;
+        gap: 30px;
+
+        &>div {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            background-color: #eee;
+            padding: 1em;
+
+            &>button {
+                background-color: rgb(10, 73, 132);
+                color: black;
+                border-radius: 50%;
+                width: 35px;
+                position: absolute;
+                top: -5px;
+                right: -5px;
+                &:hover{
+                    background-color: aqua;
+                }
+                &:active{
+                    scale: 0.8;
+                }
+            }
+        }
+    }
+}
+
+.JsonPaginate {
+    height: 100px;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+
+    &>li {
+        background-color: rgb(10, 73, 132);
+        height: 30px;
+        border-radius: 20px;
+        overflow: hidden;
+
+        &>a {
+            padding: 1em;
+        }
+    }
+}
