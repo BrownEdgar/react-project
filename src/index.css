@@ -2,6 +2,7 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+<<<<<<< HEAD
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -72,3 +73,18 @@ pre{
   white-space:pre-line;
 } 
 
+=======
+}
+
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.App {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+p {}
+>>>>>>> 9e9e5dc6d6dc62692170de0dfd16b3687e31318e

@@ -1,0 +1,38 @@
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+    gap: 20px;
+    &__item {
+      flex-basis: 32%;
+      padding: 2em;
+      padding: 2em;
+      box-shadow:
+        rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+        rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+      padding: 1em;
+      transition: 0.3s;
+      border-radius: 8px;
+      cursor: pointer;
+      &:hover {
+        transform: translateY(-4px);
+        background-image: linear-gradient(to right, rgb(242, 112, 156), rgb(255, 148, 114));
+      }
+      p {
+        line-height: 1.5;
+        font-size: 18px;
+      }
+      h5 {
+        font-size: 30px;
+        margin-bottom: 10px;
+      }
+      h6 {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
