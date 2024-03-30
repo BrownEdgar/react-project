@@ -6,15 +6,21 @@ import Pagination from '../compponents/pagination2/Pagination.jsx';
 
 export default function App() {
   const [users, setUsers] = useState([]);
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(2);
   const [perPage, setPerPage] = useState(3);
+  const [total, setTotal] = useState(10)
   const newPosts = () => {
-    axios(`http://localhost:3000/users?_start=${page}&_limit=${perPage}`)
+    axios(`http://localhost:3000/users`, {
+      params: {
+        _limit: perPage,
+        _start: perPage * (page - 1)
+      }
+    })
       .then(res => setUsers(res.data))
   }
   useEffect(() => {
     newPosts()
-  }, [page, perPage]);
+  }, [page]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -27,13 +33,15 @@ export default function App() {
     };
     axios.post("http://localhost:3000/users", user)
       .then(res => {
-        newPosts()
+        newPosts();
+        setTotal(total + 1)
         e.target.reset()
       })
     console.log(user);
 
 
   }
+
   const setPages = (n) => { setPage(n) }
   return (
     <div className='App'>
@@ -58,7 +66,7 @@ export default function App() {
           }
         )}
       </div>
-      <Pagination total={page * perPage} perPage={perPage} setPages={setPages} />
+      <Pagination total={total} perPage={perPage} setPages={setPages} />
     </div>
   );
 }
