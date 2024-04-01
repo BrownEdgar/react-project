@@ -10,7 +10,7 @@ export default function App() {
   const [state, setState] = useState({
     data: [],
     target: 'todos',
-    limit: 5
+    _limit: 5
   })
   const [post, setPost] = useState([])
   useEffect(() => {

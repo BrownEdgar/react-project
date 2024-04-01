@@ -1,30 +1,106 @@
 body {
   background-color: rgb(117, 112, 112);
 }
+
 .App {
   display: flex;
   flex-direction: column;
-  & > form > input {
+
+  &__form {}
+
+  &>form>input {
     display: block;
     margin-bottom: 10px;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     background-color: black;
-    color: white;
+    color: blueviolet;
     font-size: 15px;
+    cursor: pointer;
   }
+
   &__users {
     margin: 0 auto;
     padding: 2em;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    & > div {
+
+    &>div {
+      position: relative;
       background-color: blueviolet;
       border-radius: 15px;
       overflow: hidden;
       padding: 1em;
+
+      &:hover {
+        scale: 1.05;
+        box-shadow: 0px 25px 20px -20px rgba(0, 0, 0, 0.45), 25px 0 20px -20px rgba(0, 0, 0, 0.45);
+      }
+
+      &>.delete {
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 5px;
+        background-color: blueviolet;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+
+        &:hover {
+          scale: 1.1;
+          color: red;
+        }
+
+        &:active {
+          scale: 1.3;
+        }
+      }
+
+      &>.edit {
+        position: absolute;
+        right: 0;
+        padding: 5px;
+        background-color: blueviolet;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+
+        :hover {
+          scale: 1.1;
+          color: rgb(42, 218, 42);
+        }
+
+        &:active {
+          scale: 1.3;
+        }
+      }
     }
+  }
+}
+
+.Pagination {
+  text-align: center;
+}
+.editUser{
+  font-size: 20px;
+  & > button{
+    margin-left: 39%;
+    background-color: black;
+    border: none;
+    color: grey;
+  }
+  & > input{
+    display: block;
+    margin-bottom: 5px;
+    font-size: 15px;
+    border: none;
+    padding: 2px;
+    border-radius: 3px;
+    background-color: black;
+    color:blueviolet ;
+    cursor: pointer;
   }
 }
