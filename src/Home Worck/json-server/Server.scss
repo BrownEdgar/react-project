@@ -2,7 +2,6 @@
     height: 700px;
     background-color: grey;
     display: flex;
-    justify-content: center;
     align-items: center;
     gap: 50px;
     padding: 1em;
@@ -42,27 +41,80 @@
         gap: 30px;
 
         &>div {
+            width: 300px;
             position: relative;
             border-radius: 12px;
-            overflow: hidden;
             background-color: #eee;
-            padding: 1em;
+            padding: 0.5em;
 
-            &>button {
-                background-color: rgb(10, 73, 132);
-                color: black;
-                border-radius: 50%;
-                width: 35px;
-                position: absolute;
-                top: -5px;
-                right: -5px;
-                &:hover{
-                    background-color: aqua;
+            &>.forma{
+                position: relative;
+                height: 100%;
+                .forma__cancel{
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    background-color: rgb(217, 60, 60);
+                    color: black;
+                    padding: 0.5em;
+                    border-radius: 10px;
+                    border: none;
+                    &:active{
+                        scale: 0.9;
+                    }
+                    
                 }
-                &:active{
+                .forma__save{
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    background-color:rgb(51, 149, 209);
+                    color: black;
+                    padding: 0.5em;
+                    border-radius: 10px;
+                    border: none;
+                    &:active{
+                        scale: 0.9;
+                    }
+                    
+                }
+            }
+            &>.edit {
+                background-color:#eee;
+                color: black;
+                border: none;
+                position: absolute;
+                bottom: 5px;
+                right: 5px;
+                transition: 0.3s;
+                font-size: 16px;
+
+                &:hover {
+                background-color:#eee;
+                    color: red;
+                }
+
+                &:active {
+                    transition: 0.3s;
                     scale: 0.8;
                 }
             }
+
+            &>h2 {
+                margin-top: 0;
+                font-size: 15px;
+                font-weight: 600;
+            }
+
+            &>p {
+                margin-top: 10px;
+                font-size: 13px;
+                font-weight: 400;
+            }
+
+            
+
+            
         }
     }
 }
@@ -84,5 +136,24 @@
         &>a {
             padding: 1em;
         }
+    }
+}
+
+.delete {
+    background-color: rgb(10, 73, 132);
+    color: black;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+
+    &:hover {
+        background-color: aqua;
+    }
+
+    &:active {
+        scale: 0.8;
     }
 }
