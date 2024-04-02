@@ -1,0 +1,40 @@
+header {
+  width: 100%;
+  background-color: rgba(84, 84, 84, 0.546);
+  border-bottom: 1px solid rgb(131, 131, 131);
+  position: fixed;
+  cursor: pointer;
+  left: 0;
+  z-index: 2000;
+  top: 0;
+  color: white;
+  display: flex;
+  height: 100px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em 2em;
+  transition: 0.3s;
+  &:hover {
+    background-color: #1d1d1d;
+  }
+  nav {
+    flex-basis: 40%;
+    ul {
+      display: flex;
+      gap: 20px;
+      padding: 12px;
+      align-items: center;
+      justify-content: end;
+      li {
+        font-size: 20px;
+      }
+    }
+  }
+  .logo {
+    a {
+      font-size: 2em;
+      color: orange;
+      letter-spacing: 3px;
+    }
+  }
+}

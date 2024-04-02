@@ -1,0 +1,5 @@
+export { default as Home } from './home/Home'
+export { default as About } from './About/About'
+export { default as Contact } from './ContactUs/Contact'
+export { default as Blog } from './Blog/Blog'
+export { default as ErrorPage } from './ErrorPage/ErrorPage'

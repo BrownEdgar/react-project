@@ -1,0 +1,22 @@
+.ErrorPage {
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
+  justify-items: start;
+  padding: 1em;
+  background-color: aliceblue;
+  background-image: url("https://images.unsplash.com/photo-1633078654544-61b3455b9161?q=80&w=3564&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  h1 {
+    font-size: 4em;
+  }
+  a {
+    background-color: royalblue;
+    color: #fff;
+    padding: 0.6rem 1rem;
+    border: 0;
+    border-radius: 4px;
+  }
+}
