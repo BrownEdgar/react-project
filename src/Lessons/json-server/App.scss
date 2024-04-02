@@ -1,12 +1,13 @@
 .App {
   display: flex;
-  padding: 2em;
+  padding: 1em;
   gap: 20px;
-  form {
+  &__add {
     width: 400px;
     flex-shrink: 0;
     padding: 10px;
-    background-color: rgb(194, 45, 11);
+    background-color: rgb(25, 153, 27);
+    border-radius: 6px;
     input,
     textarea {
       margin-top: 10px;
@@ -17,16 +18,77 @@
   }
   &__posts {
     margin: 0 auto;
-    padding: 2em;
+    width: 100%;
+    padding: 1em;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 160px;
-    gap: 30px;
+    grid-template-columns: repeat(3, minmax(320px, 1fr));
+    grid-auto-rows: 260px;
+    gap: 20px;
     & > div {
       border-radius: 12px;
       overflow: hidden;
       background-color: #eee;
       padding: 1em;
+      position: relative;
+      p {
+        line-height: 1.5;
+        font-size: 18px;
+        margin: 10px 0;
+      }
+      .btn {
+        border: 0;
+        cursor: pointer;
+        border-radius: 50%;
+        i {
+          font-size: 24px;
+          font-weight: 700;
+          color: #fbfbfb;
+        }
+        &-delete {
+          width: 36px;
+          height: 36px;
+          position: absolute;
+          top: 2px;
+          right: 2px;
+          background-color: rgb(131, 135, 131);
+        }
+        &-edit {
+          position: absolute;
+          bottom: 12px;
+          right: 12px;
+          width: 46px;
+          height: 46px;
+          background-color: rgb(37, 73, 191);
+          display: block;
+          i {
+            padding: 12px;
+          }
+        }
+        &-cancel {
+          background-color: #273c75;
+          color: #fff;
+          border-radius: 6px;
+        }
+        &-save {
+          background-color: #44bd32;
+          color: #fff;
+          border-radius: 6px;
+        }
+      }
+    }
+  }
+  &__edit {
+    width: 100%;
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 6px;
+    }
+    button {
+      padding: 0.6rem 1rem;
+      font-weight: 700;
+      margin: 10px;
     }
   }
 }

@@ -32,3 +32,9 @@ pre {
   font-size: 20px;
   white-space: pre-line;
 }
+
+textarea {
+  width: 100%;
+  white-space: pre-line;
+  resize: none;
+}

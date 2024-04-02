@@ -3,10 +3,13 @@ import { nanoid } from 'nanoid'
 
 import './App.scss'
 import axios from 'axios';
+import Modal from '../../components/Modal/Modal';
 
 export default function App() {
 
   const [posts, setPosts] = useState([])
+  const [isOpen, setIsOpen] = useState(false)
+  const [editPostId, setEditPostId] = useState(null)
 
   const getPosts = () => {
     axios('http://localhost:3000/posts')
@@ -33,18 +36,42 @@ export default function App() {
       body: body.value,
     }
     axios.post('http://localhost:3000/posts', data)
-      .then(res => {
+      .then(() => {
         getPosts();
         e.target.reset()
       })
       .catch(err => console.log(err))
+  }
 
-
+  const deleteById = (id) => {
+    console.log(id)
+    axios.delete(`http://localhost:3000/posts/${id}`)
+      .then(res => {
+        setIsOpen(true);
+        setTimeout(setIsOpen, 3010, false)
+        getPosts();
+      })
+  }
+  const setediatablePostId = (id) => {
+    setEditPostId(id)
+  }
+  const chagePostSubmit = (e) => {
+    e.preventDefault();
+    if (editPostId === null) return;
+    const { title, body } = e.target;
+    const newPost = {
+      title: title.value,
+      body: body.value,
+    }
+    axios.patch(`http://localhost:3000/posts/${editPostId}`, newPost)
+      .then(res => getPosts())
+      .finally(() => setEditPostId(null))
   }
 
   return (
     <div className='App'>
-      <form onSubmit={handleSubmit}>
+      {isOpen ? <Modal /> : null}
+      <form onSubmit={handleSubmit} className='App__add'>
         <input type="text" placeholder='title' name='title' required />
         <input type="number" placeholder='userId' name='userId' max={10} min={1} required />
         <textarea name="body" id="body" cols="30" rows="5" required></textarea>
@@ -55,12 +82,39 @@ export default function App() {
           posts.map(elem => {
             return (
               <div key={elem.id}>
-                <h2>{elem.title}</h2>
+                {(editPostId === elem.id) ? (
+                  <form className='App__edit' onSubmit={chagePostSubmit}>
+                    <textarea name="title" id="title" cols="30" rows="1" defaultValue={elem.title}>
+                    </textarea>
+                    <textarea name="body" id="body" cols="30" rows="6" defaultValue={elem.body}>
+
+                    </textarea>
+                    <button type="button" className='btn btn-cancel' onClick={() =>
+                      setEditPostId(null)}>cancel</button>
+                    <button type="submit" className='btn btn-save'>save</button>
+
+                  </form>
+                ) : (
+                  <>
+                    <button className='btn btn-delete' onClick={() => deleteById(elem.id)}>
+                      <i className="bi bi-x-octagon"></i>
+                    </button>
+                    <h2>{elem.title}</h2>
+                    <p>{elem.body}</p>
+                    <button className='btn btn-edit' onClick={() => setediatablePostId(elem.id)} >
+                      <i className="bi bi-pencil"></i>
+                    </button>
+                  </>
+                )
+                }
+
               </div>
             )
           })
         }
-      </div>
-    </div>
+      </div >
+    </div >
   )
 }
+
+

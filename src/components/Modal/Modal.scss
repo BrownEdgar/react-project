@@ -1,0 +1,35 @@
+.Modal {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  background-color: rgba(194, 53, 22, 0.9);
+  min-width: 500px;
+  border-radius: 6px;
+  z-index: 9999;
+  animation: show 3s cubic-bezier(0.16, 1.45, 0.92, 1.17) 0s 1 alternate both;
+  &__content {
+    padding: 1em;
+    border-radius: 12px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+  }
+}
+
+@keyframes show {
+  0% {
+    transform: translateX(100%) rotate(6deg) scale(0.6);
+  }
+
+  20%,
+  90% {
+    transform: translateX(0%) rotate(0deg) scale(1);
+  }
+  100% {
+    transform: translateX(100%) rotate(-6deg) scale(0.6);
+  }
+}
