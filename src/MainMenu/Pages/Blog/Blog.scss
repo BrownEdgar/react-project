@@ -1,0 +1,25 @@
+.Blog {
+    div {
+        padding: 1em;
+        background-color: silver;
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 1fr 2fr;
+
+        img {
+            border-radius: 10px;
+            width: 500px;
+            height: 300px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            margin-top: 20px;
+            font-weight: 400;
+            font-size: 20px;
+        }
+    }
+}
