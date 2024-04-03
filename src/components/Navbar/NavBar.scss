@@ -1,0 +1,44 @@
+header{
+  width: 100%;
+  background-color: rgb(198, 103, 52);
+  border-bottom: 1px solid rgb(255, 2, 57);
+  position: fixed;
+  left: 0;
+  z-index: 2000;
+  cursor: pointer;
+  top: 0;
+  color: white;
+  display: flex;
+  height: 100px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em 2em;
+  transition: 0.3s;
+  &:hover{
+    background-color: #1d1d1d;
+  }
+  nav{
+   
+    flex-basis: 40%;
+  }
+  ul{
+    display: flex;
+    gap: 20px;
+    padding: 12px;
+    align-items: center;
+    justify-content: end;
+   
+  }
+  li{
+    font-size: 20px;
+  }
+  .logo{
+      position: relative;
+      left: -550px;
+    a {
+      font-size: 2em;
+      color: orange;
+      letter-spacing: 3px;
+    }
+  }
+}
