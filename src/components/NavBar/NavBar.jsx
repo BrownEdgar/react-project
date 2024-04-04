@@ -1,28 +1,33 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 
 import './NavBar.scss'
 import ROUTES from '../../routes'
+
+const setActiveClass = ({ isActive }) => isActive ? 'active__link' : ''
 
 export default function NavBar() {
   return (
     <header>
       <div className="logo">
-        <Link to={ROUTES.HOME}>LOGO</Link>
+        <NavLink to={ROUTES.HOME}>LOGO</NavLink>
       </div>
       <nav>
         <ul>
           <li>
-            <Link to={ROUTES.HOME}>Home</Link>
+            <NavLink to={ROUTES.HOME} className={setActiveClass}>Home</NavLink>
           </li>
           <li>
-            <Link to={ROUTES.ABOUT}>About</Link>
+            <NavLink to={ROUTES.ABOUT} className={setActiveClass}>About</NavLink>
           </li>
           <li>
-            <Link to={ROUTES.CONTACT}>Contact</Link>
+            <NavLink to={ROUTES.CONTACT} className={setActiveClass}>Contact</NavLink>
           </li>
           <li>
-            <Link to={ROUTES.BLOG}>Blog</Link>
+            <NavLink to={ROUTES.POSTS} className={setActiveClass}>Posts</NavLink>
+          </li>
+          <li>
+            <NavLink to={ROUTES.BLOG} className={setActiveClass}>Blog</NavLink>
           </li>
         </ul>
       </nav>
