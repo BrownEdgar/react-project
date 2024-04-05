@@ -1,0 +1,14 @@
+.Posts{
+    &__link{
+        display: inline-block;
+        width: 45%;
+        background-color:#1d1d1d;
+        color: rgb(247, 83, 23);
+        font-weight: 500;
+        padding: 1em;
+        gap: 10px;
+        border-radius: 12px;
+        margin-top: 12px;
+        margin-left: 12px;
+    }
+}

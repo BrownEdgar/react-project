@@ -1,0 +1,34 @@
+.Post {
+
+    .postBox {
+        display: block;
+        font-family: monospace;
+        white-space: pre;
+        text-align: left;
+        background-color: #1d1d1d;
+        color: orangered;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+
+        button {
+            padding: 1em;
+            margin-top: 10px;
+            border: none;
+            background-color: #1d1d1d;
+            color: orangered;
+            border-radius: 12px;
+
+            &:disabled {
+                background-color: grey;
+                scale: 0.9;
+            }
+            &:active {
+                scale: 0.9;
+            }
+        }
+    }
+}

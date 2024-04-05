@@ -1,0 +1,14 @@
+.MainLayouts{
+
+    footer{
+        background-color: #1d1d1d;
+        display: flex;
+        justify-content: space-around;
+        padding: 1em;
+        list-style: none;
+        color: white;
+        em{
+            color: orangered;
+        }
+    }
+}
