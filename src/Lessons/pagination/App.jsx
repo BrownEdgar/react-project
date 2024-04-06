@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.scss'
-import Pagination from '../../components/Pagination/Pagination';
+s
 import ReactPaginate from 'react-paginate';
 import CircleLoader from '../../components/Loaders/CircleLoader/CircleLoader'
 
