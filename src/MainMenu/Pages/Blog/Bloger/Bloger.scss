@@ -1,0 +1,42 @@
+.Bloger{
+    display: flex;
+    gap: 50px;
+    padding: 1em 4em;
+    &>.active{
+        flex-basis: 60%;
+        margin-top: 100px;
+        h1{
+            padding: 0.5em 0em;
+            float: left;
+            font-size: 45px;
+        }
+        img{
+            width: 100%;
+        }
+        
+        p{
+            margin-top: 20px;
+            text-align: start;
+            font-size: 17px;
+        }
+        ul{
+            text-align: start;
+            padding:1em 3em;
+            list-style:disc;
+            display: grid;
+            gap: 20px;
+        }
+    }
+    &>.blog-nav{
+        margin-top: 100px;
+        &>.link{
+            margin-top: 22px;
+            display: flex;
+            gap: 22px;
+            img{
+                width: 150px;
+                height: 150px;
+            }
+        }
+    }
+}

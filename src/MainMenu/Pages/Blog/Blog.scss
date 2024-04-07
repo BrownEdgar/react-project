@@ -1,25 +1,37 @@
-.Blog {
-    div {
-        padding: 1em;
-        background-color: silver;
-        display: grid;
-        gap: 20px;
-        grid-template-columns: 1fr 2fr;
+.top-image {
+    background-image: url('https://impreza3.us-themes.com/wp-content/uploads/2015/10/header-image.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    height: 350px;
+    position: relative;
 
-        img {
-            border-radius: 10px;
-            width: 500px;
-            height: 300px;
-        }
+    &>.over {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(34, 35, 41, 0.8);
 
-        h1 {
-            text-align: center;
-        }
-
-        p {
-            margin-top: 20px;
-            font-weight: 400;
-            font-size: 20px;
-        }
     }
+
+    h1 {
+        position: absolute;
+        inset: 0;
+        top: 200px;
+        color: rgb(255, 255, 255);
+        display: block;
+        font-family: inherit;
+        font-size: 68px;
+        font-weight: 300;
+        letter-spacing: 5px;
+    }
+}
+.box{
+    padding: 6em 1em;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    img{
+        width:400px ;
+    }
+
 }

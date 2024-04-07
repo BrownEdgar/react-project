@@ -25,6 +25,12 @@ export default function NavBar() {
                     </li>
                 </ul>
             </nav>
+            <div>
+                <i className='bi bi-facebook'></i>
+                <i className="bi bi-instagram"></i>
+                <i className="bi bi-behance"></i>
+                <i className="bi bi-dribbble"></i>
+            </div>
         </header>
     )
 }

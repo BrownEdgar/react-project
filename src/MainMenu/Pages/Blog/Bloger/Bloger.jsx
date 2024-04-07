@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import './Blog.scss'
+import React,{useState} from 'react'
+import './Bloger.scss'
+import {Link, useParams } from 'react-router-dom'
 
-export default function Blog() {
-    const [blog, setBlog] = useState([
+export default function Bloger() {
+    const [bloger, setBloger] = useState([
         {
             id: 1,
             poster: 'https://impreza3.us-themes.com/wp-content/uploads/2016/01/blog-1-721x479.jpg',
@@ -83,26 +83,40 @@ export default function Blog() {
             descThree: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo. Nulla varius consequat magna, id molestie ipsum volutpat quis. Suspendisse consectetur fringilla luctus. Fusce id mi diam, non ornare orci. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor.',
         }
     ])
-    return (
-        <div className='Blog'>
-            <div className='top-image'>
-                <div className='over'></div>
-                <h1>BLOG</h1>
-            </div>
-            <div className='box'>
-
-                {
-                    blog.map(elem => {
-                        return <Link 
-                        to={`${elem.id}`}
-                        key={elem.title}
-                        >
+    const {id} = useParams()
+  return (
+    <div className='Bloger'>
+        <div className='active'>
+            {
+                bloger.map(elem=>{
+                    if (elem.id===+id) {
+                        return <div key={elem.id}>
+                            <h1>{elem.title}</h1>
                             <img src={elem.poster} alt="" />
-                            <h2>{elem.title}</h2>
-                        </Link>
-                    })
-                }
-            </div>
+                            <p>{elem.descOne}</p>
+                            <p>{elem.descTwo}</p>
+                            <p>{elem.descThree}</p>
+                            <ul>
+                                {elem.list.map(el=>{return <li key={el}>{el}</li>})}
+                            </ul>
+                            <p>{elem.descOne}</p>
+
+                        </div>
+                    }
+                })
+            }
         </div>
-    )
+        <div className='blog-nav'>
+            {
+                bloger.map(elem=>{
+                    return <Link className='link' key={elem.id} to={`../blog/${elem.id}`}>
+                        <img src={elem.poster} alt="" />
+                        <h3>{elem.title}</h3>
+                    </Link>
+                })
+            }
+        </div>
+
+    </div>
+  )
 }

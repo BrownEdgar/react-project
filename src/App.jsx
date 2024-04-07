@@ -8,7 +8,7 @@ import Pagination from './Home Worck/Pagination/Pagination'
 import AxiosTask from './Home Worck/Axios/AxiosTask'
 import Server from './Home Worck/json-server/Server'
 // menu
-import {Home,Blog,About,Posts,Post,ErrorPage} from './MainMenu/Pages/imports'
+import {Home,Blog,Bloger,About,Posts,Post,ErrorPage} from './MainMenu/Pages/imports'
 import { Routes, Route } from 'react-router-dom'
 import MainLayouts from './MainMenu/NavBar/Layouts/MainLayouts'
 
@@ -30,6 +30,8 @@ export default function App() {
         <Route path='/' element={<MainLayouts/>}>
         <Route index element={<Home />} />
         <Route path='blog' element={<Blog />} />
+        <Route path='blog/:id' element={<Bloger />} />
+
         <Route path='about' element={<About />} />
         <Route path='posts' element={<Posts />} />
         <Route path='posts/:id' element={<Post />} />
