@@ -32,6 +32,9 @@ header {
 
             li {
                 font-size: 20px;
+                &:hover{
+            color: rgb(207, 25, 56);
+                }
             }
         }
     }
