@@ -12,6 +12,7 @@ import {Home,Blog,Bloger,About,Posts,Post,ErrorPage} from './MainMenu/Pages/impo
 import { Routes, Route } from 'react-router-dom'
 import MainLayouts from './MainMenu/NavBar/Layouts/MainLayouts'
 
+import User from './Home Worck/UserAP/User'
 
 
 export default function App() {
@@ -26,21 +27,18 @@ export default function App() {
       {/* <AxiosTask/> */}
       {/* <Server/> */}
 
-      <Routes>
+      {/* <Routes>
         <Route path='/' element={<MainLayouts/>}>
         <Route index element={<Home />} />
         <Route path='blog' element={<Blog />} />
         <Route path='blog/:id' element={<Bloger />} />
-
         <Route path='about' element={<About />} />
         <Route path='posts' element={<Posts />} />
         <Route path='posts/:id' element={<Post />} />
         <Route path='*' element={<ErrorPage />} />
         </Route>
-        
-
-      </Routes>
-
+      </Routes> */}
+      <User/>
 
 
     </div>
