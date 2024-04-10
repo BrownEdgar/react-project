@@ -21,6 +21,9 @@ export default function NavBar() {
             <Link to={ROUTES.CONTACT}>Contact</Link>
           </li>
           <li>
+            <Link to={ROUTES.POSTS}>Posts</Link>
+          </li>
+          <li>
             <Link to={ROUTES.BLOG}>Blog</Link>
           </li>
         </ul>
