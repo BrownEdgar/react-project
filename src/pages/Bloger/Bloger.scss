@@ -11,6 +11,11 @@
   background-color: rgba($color: $bg, $alpha: $a);
   z-index: 1;
 }
+@mixin titleFont() {
+  font-family: "Cabin Sketch", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
 
 .Bloger {
   &__poster {
@@ -31,5 +36,99 @@
     &::before {
       @include layer(#222329, 0.8);
     }
+  }
+  &__wrapper {
+    position: relative;
+    max-width: 1440px;
+    margin: 40px auto;
+    display: flex;
+    gap: 40px;
+    .main__blog {
+      flex: 0 1 60%;
+      font-size: 20px;
+      &-title {
+        font-size: 60px;
+        margin-bottom: 20px;
+        @include titleFont();
+        color: yellowgreen;
+      }
+      &-list {
+        list-style: disc;
+        list-style-position: inside;
+        padding: 0 50px;
+        margin: 40px 0;
+        li {
+          width: 100%;
+
+          margin-bottom: 10px;
+        }
+      }
+      &-paragraph {
+        line-height: 1.5;
+
+        margin-bottom: 20px;
+        color: #363636;
+      }
+      img {
+        width: 100%;
+        object-fit: cover;
+        display: inline-block;
+        margin-bottom: 20px;
+      }
+      &-footer {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        color: #a2a2a2;
+        font-size: 18px;
+        .icon {
+          line-height: 1;
+          svg {
+            font-size: 36px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .top__blogs {
+      flex-basis: 40%;
+      min-width: 300px;
+      display: flex;
+      flex-direction: column;
+      margin-top: 60px;
+      gap: 40px;
+      align-self: start;
+      padding: 1em 0;
+      position: sticky;
+      top: 120px;
+      align-items: center;
+      & > a {
+        display: flex;
+        gap: 14px;
+
+        img {
+          width: 110px;
+          height: 110px;
+          object-position: center;
+          object-fit: cover;
+        }
+        & > div {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          padding-bottom: 5px;
+
+          .date {
+            i {
+              margin-right: 10px;
+              color: rgba(255, 165, 0, 0.7);
+            }
+          }
+        }
+      }
+    }
+  }
+  hr {
+    margin: 20px auto;
   }
 }
