@@ -27,7 +27,7 @@ export default function App() {
       {/* <AxiosTask/> */}
       {/* <Server/> */}
 
-      {/* <Routes>
+      <Routes>
         <Route path='/' element={<MainLayouts/>}>
         <Route index element={<Home />} />
         <Route path='blog' element={<Blog />} />
@@ -37,8 +37,8 @@ export default function App() {
         <Route path='posts/:id' element={<Post />} />
         <Route path='*' element={<ErrorPage />} />
         </Route>
-      </Routes> */}
-      <User/>
+      </Routes>
+      {/* <User/> */}
 
 
     </div>
