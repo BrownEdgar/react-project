@@ -1,0 +1,27 @@
+body{
+    margin: 0;
+}
+header {
+    width: 100%;
+    background-color: blueviolet;
+    ul {
+        margin: 0;
+        display: flex;
+        gap: 10px;
+        justify-content: end;
+        li {
+            font-size: 2em;
+            list-style: none;
+            padding: 10px;
+            padding-right: 20px;
+            a {
+                text-decoration: none;
+                color: black;
+                font-weight: 600;
+                &:hover{
+                color: white;
+                }
+            } 
+        }
+    }
+}
