@@ -1,8 +1,12 @@
 import React from 'react'
-import "./home.scss"
-
+import './Home.scss'
 export default function Home() {
-  return (
-    <div>Home</div>
-  )
+    return (
+        <div className='Home'>
+            <div className='Home__background'> 
+            <h1>Home Page</h1>
+            <p>lor20</p>
+            </div>
+        </div>
+    )
 }
