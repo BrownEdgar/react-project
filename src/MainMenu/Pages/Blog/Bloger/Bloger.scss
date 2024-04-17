@@ -42,5 +42,16 @@
 }
 .claps{
     display: flex;
-    gap: 20px;
+    align-items:center;
+    gap: 10px;
+    i{
+        scale: 1.1;
+        transition: 0.3s;
+
+        &:active{
+            scale: 1;
+            transition: 0.3s;
+        }
+    }
+    
 }

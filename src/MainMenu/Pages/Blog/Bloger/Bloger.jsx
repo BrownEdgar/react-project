@@ -5,21 +5,18 @@ import axios from 'axios'
 
 export default function Bloger() {
     const [bloger, setBloger] = useState([])
-    const [asd, setAsd] = useState({})
+    const [claps, setClaps] = useState(0)
     useEffect(() => {
         axios('http://localhost:3000/posts')
             .then(res => setBloger(res.data))
-    }, [])
+    }, [claps])
 
     const { id } = useParams()
+
    
-    const clapNum = ()=>{
-        axios({
-            baseURL:'http://localhost:3000',
-            url: 'posts/1',
-            
-          })
-        .then(res => console.log(res.data))
+    const clapNum = (idNumber,clapsNumber)=>{
+        axios.patch(`http://localhost:3000/posts/${idNumber}`,{claps:clapsNumber+1})
+        .then(res => setClaps(clapsNumber))
     }
     
     return (
@@ -27,10 +24,10 @@ export default function Bloger() {
             <div className='active'>
                 {
                     bloger.map(elem => {
-                        if (elem.id === +id) {
+                        if (elem.id === id) {
                             return <div key={elem.id}>
                                 <h1>{elem.title}</h1>
-                                <img src={elem.poster} alt="" />
+                                <img src={elem.poster}  />
                                 <p>{elem.descOne}</p>
                                 <p>{elem.descTwo}</p>
                                 <p>{elem.descThree}</p>
@@ -39,11 +36,11 @@ export default function Bloger() {
                                 </ul>
                                 <p>{elem.descOne}</p>
                                 <hr />
-                                <div className='claps' onClick={clapNum}>
-                                <i className="bi bi-hand-thumbs-up"></i>
-                                    <span>
+                                <div className='claps' >
+                                <i onClick={()=>clapNum(elem.id,elem.claps)} className="bi bi-hand-thumbs-up"></i>
+                                    <h3>
                                         {elem.claps}
-                                    </span>
+                                    </h3>
                                 </div>
 
                             </div>

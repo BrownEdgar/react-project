@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useState,useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import SimpleSlider from '../../SimpleSlider/SimpleSlider'
 import './Blog.scss'
 
 export default function Blog() {
@@ -15,13 +16,15 @@ export default function Blog() {
                 <div className='over'></div>
                 <h1>BLOG</h1>
             </div>
+            <div className='slider'>
+                <SimpleSlider/>
+            </div>
             <div className='box'>
-
                 {
                     blog.map(elem => {
                         return <Link 
                         to={`${elem.id}`}
-                        key={elem.title}
+                        key={elem.id}
                         >
                             <img src={elem.poster} alt="" />
                             <h2>{elem.title}</h2>
