@@ -1,8 +1,18 @@
-import React from "react";
+import axios from "axios";
+import React,{ useState,useEffect } from "react";
+import { Link } from "react-router-dom";
 import Slider from "react-slick";
 
 export default function SimpleSlider() {
-  var settings = {
+    const [place, setPlace] = useState([])
+
+    useEffect(() => {
+      axios('http://localhost:5172/profile')
+      .then(res=>setPlace(res.data))
+    }, [])
+    
+   
+  const settings = {
     dots: true,
     infinite: true,
     speed: 500,
@@ -11,24 +21,14 @@ export default function SimpleSlider() {
   };
   return (
     <Slider {...settings}>
-      <div>
-        <h3>1</h3>
-      </div>
-      <div>
-        <h3>2</h3>
-      </div>
-      <div>
-        <h3>3</h3>
-      </div>
-      <div>
-        <h3>4</h3>
-      </div>
-      <div>
-        <h3>5</h3>
-      </div>
-      <div>
-        <h3>6</h3>
-      </div>
+      {
+        place.map(elem=>{
+            return<Link to={`place/${elem.id}`} key={elem.id}>
+            <img src={elem.img} />
+            <h3>{elem.name}</h3>
+            </Link>
+        })
+      }
     </Slider>
   );
 }

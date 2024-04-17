@@ -7,7 +7,7 @@ import './Blog.scss'
 export default function Blog() {
     const [blog, setBlog] = useState([])
     useEffect(() => {
-        axios('http://localhost:3000/posts')
+        axios('http://localhost:5172/posts')
         .then(res=>setBlog(res.data))
       }, [])
     return (
@@ -16,9 +16,7 @@ export default function Blog() {
                 <div className='over'></div>
                 <h1>BLOG</h1>
             </div>
-            <div className='slider'>
                 <SimpleSlider/>
-            </div>
             <div className='box'>
                 {
                     blog.map(elem => {

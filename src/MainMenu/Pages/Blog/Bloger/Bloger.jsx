@@ -7,7 +7,7 @@ export default function Bloger() {
     const [bloger, setBloger] = useState([])
     const [claps, setClaps] = useState(0)
     useEffect(() => {
-        axios('http://localhost:3000/posts')
+        axios('http://localhost:5172/posts')
             .then(res => setBloger(res.data))
     }, [claps])
 
@@ -15,7 +15,7 @@ export default function Bloger() {
 
    
     const clapNum = (idNumber,clapsNumber)=>{
-        axios.patch(`http://localhost:3000/posts/${idNumber}`,{claps:clapsNumber+1})
+        axios.patch(`http://localhost:5172/posts/${idNumber}`,{claps:clapsNumber+1})
         .then(res => setClaps(clapsNumber))
     }
     
