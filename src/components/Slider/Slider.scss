@@ -1,0 +1,35 @@
+.slider-container{
+    width: 95%;
+    margin-left: 30px;
+}
+.slick-arrow{
+    width: 25px;
+    height: 60px;
+}
+::before{
+    background-color: blueviolet;  
+}
+h1,h3{
+    text-align: center;
+    margin-top: 0px;
+}
+img{
+    height: 230px;
+    width: 370px;
+}
+.slick-prev:before{
+    font-size: 40px;
+}
+.slick-next:before{
+    font-size: 35px;  
+}
+.slick-next,
+.slick-prev{
+    top:40%;
+}
+.slick-prev{
+    left:-40px;
+}
+.slick-current{
+    scale: 1.15;
+}
