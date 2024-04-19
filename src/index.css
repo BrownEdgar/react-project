@@ -52,6 +52,11 @@ a{
   scale: 0.9;
   transition: 0.2s;
 }
-.slick-dots{
-  scale: 1.9;
+
+button{
+  padding: 1em;
+  margin: 12px;
+  border-radius: 12px;
+  background-color: #2d2d2d;
+  color: aliceblue;
 }

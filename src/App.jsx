@@ -13,6 +13,8 @@ import { Routes, Route } from 'react-router-dom'
 import MainLayouts from './MainMenu/NavBar/Layouts/MainLayouts'
 
 import User from './Home Worck/UserAP/User'
+import Custome from './Home Worck/hooks/useCustom/Custome'
+
 
 
 export default function App() {
@@ -27,7 +29,7 @@ export default function App() {
       {/* <AxiosTask/> */}
       {/* <Server/> */}
 
-      <Routes>
+      {/* <Routes>
         <Route path='/' element={<MainLayouts/>}>
         <Route index element={<Home />} />
         <Route path='blog' element={<Blog />} />
@@ -38,8 +40,10 @@ export default function App() {
         <Route path='posts/:id' element={<Post />} />
         <Route path='*' element={<ErrorPage />} />
         </Route>
-      </Routes>
+      </Routes> */}
+
       {/* <User/> */}
+      <Custome/>
 
 
     </div>
