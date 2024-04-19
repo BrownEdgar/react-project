@@ -12,7 +12,7 @@ const [code , {generateCode}] = usePassword(15)
   return (
     <div className='Custome'> 
     
-        <h1>Count: {JSON.stringify(code)}</h1>
+        <h1>Password: {JSON.stringify(code)}</h1>
         <button onClick={generateCode}>code</button>
         <hr/>
         <h1>Count: {count}</h1>
