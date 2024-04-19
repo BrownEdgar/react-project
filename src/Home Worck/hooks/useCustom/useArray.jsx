@@ -6,7 +6,6 @@ export default function useArray({quantity,min,max}) {
     useEffect(() => {
         const arr = Array.from({length:quantity}, ()=>Math.round(Math.random() * (max - min)+min))
         setData(arr)
-        console.log(arr);
     }, [quantity])
     
     const getSum = () => {
