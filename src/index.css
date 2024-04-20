@@ -4,3 +4,91 @@
   box-sizing: border-box;
   width: 100%;
 }
+
+body{
+  max-width: 1440px;
+  margin: 0px auto;
+  line-height: 1.2;
+  /* background-color: #1d1d1d; */
+}
+
+.slick-slider{
+  height: 600px;
+  background-color: #2d2d2d;
+  display: flex;
+  align-items: stretch;
+
+
+}
+
+.slick-slide{
+  padding: 50px;
+  height: 100%; 
+  transition: 0.3s;
+}
+.slick-track{
+  height: 100%;
+  padding: 20px;
+ 
+}
+
+.slick-slide div{
+  position: relative;
+  height: 90% !important;
+  overflow: hidden;
+  margin: 20px;
+}
+
+.slick-slide div img{
+  width: 100% !important ;
+  object-fit: cover;
+  position: absolute;
+  height: 100% !important;
+}
+
+.slick-slide div img{
+   filter: blur(6px);
+   transition:  scale 2s;
+}
+
+.slick-slide.slick-center div img{
+  filter: blur(0px);
+  scale: 1.2;
+}
+.slick-arrow{
+  position: absolute;
+  top: 50%;
+  border-radius: 50%;
+  padding: 1em;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: forestgreen;
+  color:#eee;
+  border: 1px solid gray;
+  cursor: pointer;
+}
+
+
+.slick-arrow-next{
+  right: -42px;
+}
+
+.slick-center{
+  box-shadow: rgb(0, 0, 0, 0.35) 0px 5px 15px;
+  border: 5px solid rgb(51, 82, 196);
+}
+
+.slick-dots li button{
+  font-size: 12px;
+}
+
+.slick-dots li button::before{
+  color: greenyellow;
+}
+
+.slick-dots li.slick-active button:before{
+  color: yellow;
+}
