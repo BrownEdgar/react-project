@@ -14,6 +14,7 @@ import MainLayouts from './MainMenu/NavBar/Layouts/MainLayouts'
 
 import User from './Home Worck/UserAP/User'
 import Custome from './Home Worck/hooks/useCustom/Custome'
+import AppContext from './Home Worck/hooks/useContext/App'
 
 
 
@@ -43,7 +44,8 @@ export default function App() {
       </Routes> */}
 
       {/* <User/> */}
-      <Custome/>
+      {/* <Custome/> */}
+      <AppContext/>
 
 
     </div>
