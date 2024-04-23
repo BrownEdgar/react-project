@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './React/UseContext/C'
+import App from './React/UseContext/App'
 import { BrowserRouter as Router } from 'react-router-dom'
 import './index.css'
 
