@@ -1,29 +1,18 @@
 import React from 'react'
-import './App.scss'
-import NavBar from './components/NavBar'
-import { About, Blog, Contact, Error, Home, Posts } from './Pages'
-import { Routes, Route} from 'react-router-dom'
-import ROUTES from './routes'
+import { useSelector, useDispatch } from 'react-redux'
+import { addcounter, minusCount } from './features/counter/counterSlice'
 
 export default function App() {
+  const dispatch = useDispatch()
+  const S = useSelector((state) => state.counter)
+  console.log(S);
   return (
-    <div className='App'>
-     <div className='App__Container'>
-     <NavBar/>
-      <Routes>
-        <Route path={ROUTES.HOME} element={<Home/>}/>
-        <Route path={ROUTES.ABOUT} element={<About/>}/>
-        <Route path={ROUTES.POSTS} element={<Posts/>}/>
-        <Route path={ROUTES.CONTACT} element={<Contact/>}/>
-        <Route path={ROUTES.BLOG} element={<Blog/>}/>
-        <Route path='*' element={<Error/>}/>
-
-      </Routes>
-      
-     </div>
-      
-      
-      
-    </div>
+    <div>
+      <h1>
+      counter : {S}
+      </h1>
+      <button onClick={()=>  dispatch(addcounter())}>PLUS</button>
+      <button onClick={()=> dispatch(minusCount())}>MINUS</button>
+      </div>
   )
 }
