@@ -2,7 +2,7 @@ header{
   width: 100%;
   background-color: rgb(198, 103, 52);
   border-bottom: 1px solid rgb(255, 2, 57);
-  position: fixed;
+  position: sticky;
   left: 0;
   z-index: 2000;
   cursor: pointer;
@@ -27,6 +27,7 @@ header{
     padding: 12px;
     align-items: center;
     justify-content: end;
+    list-style: none;
    
   }
   li{

@@ -4,7 +4,7 @@ import './Home.scss'
 export default function Home() {
   return (
     <div className='Home'>
-      <h1>Home page</h1>
+  
 
        <div className="Home__content">
         <h1>React router dom <br /> <span>create</span>Web Site</h1>
