@@ -1,0 +1,16 @@
+.Todos {
+  display: flex;
+  width: 1200px;
+  margin: 40px auto;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  & > div {
+    border-radius: 6px;
+    padding: 1em;
+    background-image: linear-gradient(to right, #00b09b, #96c93d);
+    height: 120px;
+    flex-basis: 47%;
+  }
+}
