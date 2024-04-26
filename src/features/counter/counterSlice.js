@@ -10,8 +10,11 @@ addcounter:(state, action)=>{
 minusCount:(state, action)=>{
     return state-1
 }
+    },
+    selectors:{
+        getCounter: (state) => state
     }
 })
 export default counterSlice.reducer
-export const {addcounter} = counterSlice.actions
-export const {minusCount} = counterSlice.actions
+export const {addcounter, minusCount} = counterSlice.actions
+export const {getCounter} = counterSlice.selectors
