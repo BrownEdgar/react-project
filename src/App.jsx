@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch, } from 'react-redux'
-import { addCounter, getCounter } from './features/counter/counterSlice'
-import Todos from './components/Todos/Todos'
-import axios from 'axios'
-import { addTodos, getAsyncTodos } from './features/todos/todosSlice'
+import { addCounter, getCounter } from '@f/counter/counterSlice'
+import Todos from '@/Todos/Todos'
+
+import { getAsyncTodos } from '@f/todos/todosSlice'
 
 export default function App() {
 
@@ -13,7 +13,6 @@ export default function App() {
   useEffect(() => {
     dispatch(getAsyncTodos())
   }, [])
-
 
   return (
     <div>

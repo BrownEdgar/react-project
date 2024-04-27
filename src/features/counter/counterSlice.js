@@ -1,8 +1,12 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createAction, createSlice } from '@reduxjs/toolkit'
+
+
+export const multiplyCounter = createAction('counter/multiplyCounter')
+
 
 const counterSlice = createSlice({
   name: 'counter',
-  initialState: 0,
+  initialState: 1,
   reducers: {
     addCounter(state) {
       return state + 1;
@@ -10,6 +14,11 @@ const counterSlice = createSlice({
   },
   selectors: {
     getCounter: (state) => state
+  },
+  extraReducers: (builder) => {
+    builder.addCase(multiplyCounter, (state, action) => {
+      return state + 1;
+    })
   }
 })
 

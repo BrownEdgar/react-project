@@ -40,6 +40,12 @@ const toodosSlice = createSlice({
       .addCase(getAsyncTodos.rejected, (state, action) => {
         state.status = 'rejected';
       })
+      .addMatcher(
+        (action) => action.type.endsWith('/multiplyCounter'),
+        (state, action) => {
+          console.log('addMatcher', action)
+        }
+      )
   }
 })
 
