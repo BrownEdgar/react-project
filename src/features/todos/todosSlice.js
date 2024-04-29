@@ -7,7 +7,7 @@ const todosSlice= createSlice({
         status: "idle"
     },
     reducers:{
-addTodos:(state,action)=>{
+addTodos:(state,action) => {
     state.data=action.payload
 }
     },
