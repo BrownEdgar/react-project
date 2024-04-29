@@ -1,3 +1,4 @@
+import Users from '@/Users/Users'
 import React,{useEffect} from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import './App.css'
@@ -20,6 +21,8 @@ export default function App() {
       <button onClick={() => dispatch(decrement())}>decrement</button>
       <hr/>
       <Todos/>
+      <hr/>
+      <Users/>
     </div>
   )
 }
