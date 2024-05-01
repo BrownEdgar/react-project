@@ -15,6 +15,10 @@ const counterSlice = createSlice({
        return Math.round(Math.random()*(state-state))
     },
    
+  },
+
+  selectors:{
+   getCounter:(state)=>state 
   }
 })
 
@@ -26,6 +30,7 @@ export default counterSlice.reducer;
 export const {addCounter} =counterSlice.actions
 export const {foo} = counterSlice.actions
 export const {fonction} = counterSlice.actions
+export const{getCounter} = counterSlice.selectors
 
 
 
