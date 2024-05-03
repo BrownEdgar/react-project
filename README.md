@@ -21,3 +21,19 @@ Currently, two official plugins are available:
 // ev counterSlice.jsi mej verjum import enq anum anpaym sa export default counterSlice.reducer vorpisi aystex counter: dimac grem anune hushumnere beri
 // import { useSelector } from 'react-redux' grum em App.jsxi mej ev sa stanum e mek funckya  const S = useSelector((state) =>)
 // aranc  useSelector() chem kara nkarem Appum aranc useDispatch ( chem kara poxem inchvor mi ban) import anem anpayman
+
+
+
+myFirstMiddleware stanum e 3 ban 
+
+
+const myFirstMiddleware = () => () =>() =>{
+  
+} 
+1 store vore dostup e unenum bazayin,2 next funkcyan vore ete inqe kanchec uremn harcume araj e gnum sax okeya
+ev 3 argumente action vore erp disppatche galis e mez petqa paylodnela meje typnela mej@ ...
+erp orinak grenq console.log(new Data().toLocaleTimeString())
+next(action) actione partadir petq e tanq nexti vor gtni u gna araj ba \
+middlewere avelacvum e store .js i mej reducer {
+
+} prcneluc heto tak@ veradarcnelu e zangvac

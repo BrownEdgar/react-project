@@ -1,0 +1,33 @@
+body{
+  background-color: rgba(246, 242, 233, 0.734);
+}
+
+.Users{
+  background-color: rgb(168, 215, 27);
+  color: aquamarine;
+  height: 100%;
+  margin: 10px auto;
+  padding: 1em ;
+  width: 100%;
+  position: relative;
+  top: 40px;
+  font-size: 20px;
+&>button{
+ font-size: 20px;
+ margin: 5px auto;
+ color: rgb(233, 119, 5);
+ cursor: pointer;
+
+}
+  
+}
+
+input{
+  font-size: 20px;
+  margin: 5px auto;
+  color: rgb(33, 124, 228);
+  cursor: pointer;
+}
+
+
+

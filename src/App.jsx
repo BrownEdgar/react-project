@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
 import { useSelector,useDispatch } from 'react-redux'
-import { addCounter, fonction, foo, getCounter } from './features/counter/counterSlice'
+import { addCounter, fonction, foo, getCounter } from '@f/counter/counterSlice'
 import './App.scss'
-import Todos from './components/Todos/Todos'
+import Todos from '@/Todos/Todos'
 import axios from 'axios'
 import { addTodos } from './features/todos/todosSlice'
 

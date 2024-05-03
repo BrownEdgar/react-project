@@ -1,13 +1,19 @@
-import { configureStore } from '@reduxjs/toolkit'
+import { configureStore, nanoid } from '@reduxjs/toolkit'
 import counterSlice from '../features/counter/counterSlice';
 import todosSlice from '../features/todos/todosSlice';
+import UsersSlice from '../features/users/UsersSlice';
+import mainMiddleware from '../middlevaries/Middlevare';
 
 
-const store = configureStore({
+
+export const store = configureStore({
   reducer : {
     counter: counterSlice,
-    todos : todosSlice
-  }
+    todos : todosSlice,
+    users:UsersSlice
+
+  },
+  middleware:mainMiddleware
 })   
 
 
