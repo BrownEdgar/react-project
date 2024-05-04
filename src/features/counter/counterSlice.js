@@ -3,7 +3,6 @@ import { createAction, createSlice } from '@reduxjs/toolkit'
 
 export const multiplyCounter = createAction('counter/multiplyCounter')
 
-
 const counterSlice = createSlice({
   name: 'counter',
   initialState: 1,
