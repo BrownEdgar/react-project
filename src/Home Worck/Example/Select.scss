@@ -1,0 +1,44 @@
+.Select {
+    width: 600px;
+    height: 500px;
+    margin: 200px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    .nav {padding:1em;
+        display: grid;
+        gap: 22px;
+        li {
+            padding-left: 20px;
+            font-size: 35px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            transition: 1s;
+            
+            &:hover{
+                scale: 1.1;
+                background-color: orangered;
+                transition: 1s;
+            }
+        }
+        .active{
+            background-color: orange;
+        }
+    }
+
+    .display {
+        
+        li {
+            margin: 150px auto;
+            width: 150px;
+            height: 150px;
+            border: 1px solid;
+            text-align: center;
+            font-size: 70px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+
+
+        }
+    }
+}

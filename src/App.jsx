@@ -15,6 +15,8 @@ import MainLayouts from './MainMenu/NavBar/Layouts/MainLayouts'
 import User from './Home Worck/UserAP/User'
 import Custome from './Home Worck/hooks/useCustom/Custome'
 import AppContext from './Home Worck/hooks/useContext/App'
+import Select from './Home Worck/Example/Select'
+
 
 
 
@@ -45,9 +47,9 @@ export default function App() {
 
       {/* <User/> */}
       {/* <Custome/> */}
-      <AppContext/>
-
-
+      {/* <AppContext/> */}
+      
+      <Select/>
     </div>
   )
 }
